@@ -12,3 +12,18 @@ e.g:\
  cd projectA\
  python3.8 -m venv env\
 source env/bin/activate\
+
+# install requirements after source cmd
+pip install -r requirements.txt\
+
+# start jupyter
+jupyter notebook
+
+# run nb
+preprocessing for creating dataframes from UMLS file\
+spacy_knowledge_base for kb creation\
+medmentions_and_training for dataset creation and training\
+
+# current current status
+Pipeline runs and training can be done. But loss not decreasing. Further inspection of preprocessing and KB are needed
+
