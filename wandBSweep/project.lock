@@ -1,0 +1,8 @@
+login:
+  cmd: python -m weasel run login
+  script:
+    - wandb login
+  deps:
+    - path: requirements.txt
+      md5: 1aece9e9eadead0dfc5a75367646cd69
+  outs: []

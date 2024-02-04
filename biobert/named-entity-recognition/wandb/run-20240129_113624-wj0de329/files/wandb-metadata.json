@@ -1,0 +1,80 @@
+{
+    "os": "Linux-6.1.58+-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-01-29T11:36:29.820346",
+    "startedAt": "2024-01-29T11:36:24.796974",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--data_dir",
+        "../datasets/NER/all",
+        "--labels",
+        "../datasets/NER/all/labels.txt",
+        "--model_name_or_path",
+        "dmis-lab/biobert-base-cased-v1.1",
+        "--output_dir",
+        "./output/all",
+        "--max_seq_length",
+        "192",
+        "--num_train_epochs",
+        "3",
+        "--per_device_train_batch_size",
+        "32",
+        "--save_steps",
+        "1000",
+        "--seed",
+        "1",
+        "--do_train",
+        "--do_eval",
+        "--overwrite_output_dir"
+    ],
+    "state": "running",
+    "program": "/content/drive/MyDrive/biobert/named-entity-recognition/run_ner.py",
+    "codePathLocal": "run_ner.py",
+    "codePath": "named-entity-recognition/run_ner.py",
+    "git": {
+        "remote": "https://github.com/dmis-lab/biobert-pytorch.git",
+        "commit": "20bf80ad30a3f9b3bc3c6fa946746e8491adb821"
+    },
+    "email": null,
+    "root": "/content/drive/MyDrive/biobert",
+    "host": "8f972f869675",
+    "username": "root",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 1,
+    "cpu_count_logical": 2,
+    "cpu_freq": {
+        "current": 2000.17,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2000.17,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2000.17,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 166.77415084838867,
+            "used": 27.188068389892578
+        }
+    },
+    "gpu": "Tesla V100-SXM2-16GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla V100-SXM2-16GB",
+            "memory_total": 17179869184
+        }
+    ],
+    "memory": {
+        "total": 12.674789428710938
+    }
+}
