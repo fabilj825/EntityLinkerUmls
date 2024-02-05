@@ -7,23 +7,9 @@ vars:
 
 # These are the directories that the project needs. The project CLI will make
 # sure that they always exist.
-directories: ["scripts", "assets", "training", "configs"]
+directories: ["scripts", "training", "configs"]
 
-# Assets that should be downloaded or available in the directory. You can replace
-# this with your own input data.
-assets:
-  - dest: "assets/aclImdb_v1.tar.gz"
-    url: "http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz"
-    description: "Movie Review Dataset for sentiment analysis by Maas et al., ACL 2011."
 
-workflows:
-  log:
-    - data
-    - train
-
-  parameter-search:
-    - data
-    - train-search
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
@@ -37,15 +23,6 @@ commands:
     deps:
       - "requirements.txt"
 
-  - name: "data"
-    help: "Extract the gold-standard annotations"
-    script:
-      - "tar -xzf ./assets/aclImdb_v1.tar.gz -C ./assets/"
-    deps:
-      - "assets/aclImdb_v1.tar.gz"
-    outputs:
-      - "assets/aclImdb/train/"
-      - "assets/aclImdb/test/"
 
   - name: "train"
     help: "Train a model using the default config"
@@ -57,8 +34,6 @@ commands:
     script:
       - "python ./scripts/sweeps_using_code.py configs/${vars.default_config} training/"
     deps:
-      #- "assets/aclImdb/train/"
-      #- "assets/aclImdb/test/"
       - "configs/"
 
   - name: "clean"
