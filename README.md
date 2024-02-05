@@ -23,6 +23,6 @@ Run preprocessingUMLS.ipynb -> spacy_knowledge_base.ipynb -> medmentions_and_tra
 
 ### run inference with our models
 
-Run inference in different combinations.
+Run inference in different combinations with inference_all_models.ipynb.
 
 
