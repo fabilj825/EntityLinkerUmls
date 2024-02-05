@@ -1,11 +1,10 @@
 
-from typing import Optional, NamedTuple, List, Iterator, Dict, Tuple
-from typing import Optional, Callable, Iterable, Iterator
+from typing import Optional, NamedTuple, List, Iterator, Dict, Tuple, Callable
 import spacy
 from spacy.training import Example
 import warnings
 
-from spacy.training import Corpus, Example
+from spacy.training import Example
 from spacy.language import Language
 
 import os
@@ -21,21 +20,6 @@ import os
 from pathlib import Path
 from typing import Optional
 
-
-
-# @spacy.registry.readers("MyCorpus.v1")
-# def create_docbin_reader(file: Path) -> Callable[["Language"], Iterable[Example]]:
-#     return partial(read_files, file)
-
-
-# def read_files(file: Path, nlp: "Language") -> Iterable[Example]:
-#     # we run the full pipeline and not just nlp.make_doc to ensure we have entities and sentences
-#     # which are needed during training of the entity linker
-#     with nlp.select_pipes(disable="entity_linker"):
-#         doc_bin = DocBin().from_disk(file)
-#         docs = doc_bin.get_docs(nlp.vocab)
-#         for doc in docs:
-#             yield Example(nlp(doc.text), doc)
 class MedMentionEntity(NamedTuple):
     start: int
     end: int
@@ -213,30 +197,14 @@ def read_full_med_mentions(
             (
                 x.start,
                 x.end,
-                x.umls_id,
+                "ORG",			#x.umls_id,
             )
             for x in example.entities
         ]
         spacy_format_entities = remove_overlapping_entities(
             sorted(spacy_format_entities, key=lambda x: x[0])
         )
-        # spacy_format_entities=sorted(spacy_format_entities, key=lambda x: x[0])
-        
-        # for i,ent in enumerate(spacy_format_entities):
-        #     start=ent[0]
-        #     if i==0:
-        #         old_end=ent[1]
-        #         continue
-        #     if start < old_end:
-        #         print("overlap")
-        #         print(start)
-        #         print(old_end)
-        #         print(ent[2])
-        #         continue
-        #     old_end=ent[1]
-        #     non_overlapping.append(ent)
-        # start=0
-        # old_end=0
+
 
         spacy_example = (example.text, {"entities": spacy_format_entities})
         if example.pubmed_id in train_ids:
