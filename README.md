@@ -16,8 +16,13 @@ pip install -r requirements.txt
 2. in NERdemo/output/ -> our trained NER for Medmentions \
 3. in models -> our NEL with Scispacy Large \
 
-NERdemo, wandBSweep should be run local with command line. See according README. \
-medmentions_and_training.ipynb, preprocessingUMLS.ipynb and spacy_knowledge_base.ipynb can be run either local or in Colab. But one must change the Paths accordingly and ommit the command for including google drive. For the notebooks it is recommended to use Colab. See Version B.
+### train on our scripts
 
+NERdemo, wandBSweep should be run local with command line. See according README. They create NER models \
+Run preprocessingUMLS.ipynb -> spacy_knowledge_base.ipynb -> medmentions_and_training.ipynb in that order to create KB and a model with scispacy NER and own EL. 
+
+### run inference with our models
+
+Run inference in different combinations.
 
 
