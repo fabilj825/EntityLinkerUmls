@@ -11,7 +11,7 @@ source env/bin/activate \
 ### install requirements after source cmd
 pip install -r requirements.txt
 
-###unzip trained models
+### unzip trained models
 1. in biobert/named-entity-recognition/output/all -> our trained BIOBERT NER
 2. in NERdemo/output/ -> our trained NER for Medmentions
 3. in models -> our NEL with Scispacy Large
