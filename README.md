@@ -1,4 +1,3 @@
-# Version A: 
 ### Install and setup virtual env python
 pip install virtualenv \
 python<version> -m venv <virtual-environment-name> \
