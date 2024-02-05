@@ -1,3 +1,5 @@
 *.csv filter=lfs diff=lfs merge=lfs -text
 knowledgebase/mykb/contents filter=lfs diff=lfs merge=lfs -text
 knowledgebase/mykb/strings.json filter=lfs diff=lfs merge=lfs -text
+biobert/named-entity-recognition/output/all/checkpoint-25000-20240129T152047Z-001.zip filter=lfs diff=lfs merge=lfs -text
+model/my_nlp_FinalKB.zip filter=lfs diff=lfs merge=lfs -text
