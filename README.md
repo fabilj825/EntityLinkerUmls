@@ -11,13 +11,13 @@ source env/bin/activate \
 ### install requirements after source cmd
 pip install -r requirements.txt
 
+###unzip trained models
+1. in biobert/named-entity-recognition/output/all -> our trained BIOBERT NER
+2. in NERdemo/output/ -> our trained NER for Medmentions
+3. in models -> our NEL with Scispacy Large
+
 NERdemo, wandBSweep should be run local with command line. See according README. \
 medmentions_and_training.ipynb, preprocessingUMLS.ipynb and spacy_knowledge_base.ipynb can be run either local or in Colab. But one must change the Paths accordingly and ommit the command for including google drive. For the notebooks it is recommended to use Colab. See Version B.
 
-# Version B: 
-Copy MedMentions-master, dataframes, knowledgebase and the three notebooks in a folder in the base directory of Google drive named UMLS.
-Set paths to the files and the notebook can be run. The recommended order is:
-preprocessingUMLS.ipynb
-spacy_knowledge_base.ipynb
-medmentions_and_training.ipynb
+
 
