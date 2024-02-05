@@ -1,5 +1,5 @@
 # Version A: 
-## Install and setup virtual env python
+### Install and setup virtual env python
 pip install virtualenv\
 python<version> -m venv <virtual-environment-name>\
 e.g:\
@@ -8,7 +8,7 @@ e.g:\
  python3.8 -m venv env\
 source env/bin/activate\
 
-## install requirements after source cmd
+### install requirements after source cmd
 pip install -r requirements.txt\
 
 NERdemo, wandBSweep should be run local with command line. See according README. \
