@@ -1,4 +1,4 @@
-Commands to be executed:
+Commands to be executed when in directory using terminal:
 
 weasel run download \
 weasel run convert \
