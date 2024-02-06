@@ -27,7 +27,7 @@ commands:
   - name: "train"
     help: "Train a model using the default config"
     script:
-      - "python -m spacy train configs/${vars.default_config} --output training/ --paths.train corpus/train.spacy --paths.dev corpus/dev.spacy"
+      - "python -m spacy train configs/${vars.default_config} --output output/ --paths.train corpus/train.spacy --paths.dev corpus/dev.spacy"
 
   - name: "train-search"
     help: "Run customized training runs for hyperparameter search using [Weights & Biases Sweeps](https://docs.wandb.ai/guides/sweeps)"
