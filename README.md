@@ -1,13 +1,14 @@
+### clone project
+git clone  https://github.com/fabilj825/EntityLinkerUmls
 ### Install and setup virtual env python
 pip install virtualenv \
 python<version> -m venv <virtual-environment-name> \
 e.g: \
- mkdir projectA \
- cd projectA \
- python3.8 -m venv env \
+python3.8 -m venv env \
 source env/bin/activate \
 
 ### install requirements after source cmd
+cd EntityLinkerUmls \
 pip install -r requirements.txt
 
 ### unzip trained models
@@ -18,7 +19,7 @@ pip install -r requirements.txt
 ### train on our scripts
 
 NERdemo, wandBSweep should be run local with command line. See according README. They create NER models \
-Run preprocessingUMLS.ipynb -> spacy_knowledge_base.ipynb -> medmentions_and_training.ipynb in that order to create KB and a model with scispacy NER and own EL. 
+Run preprocessingUMLS.ipynb -> spacy_knowledge_base.ipynb -> medmentions_and_training.ipynb in that order to create KB and a model with scispacy NER and own EL. THe EL can be used to create pipelines with the NER models trained with NERdemo, Biobert or wandBSweep
 
 ### run inference with our models
 
