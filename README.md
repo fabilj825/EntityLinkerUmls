@@ -17,7 +17,8 @@ pip install -r requirements.txt
 3. in models -> our NEL with Scispacy Large \
 
 After unzipping you can decide if you want to train based on our scripts, or use inference_all_models.ipynb to test the unzipped models on MedMentions.
-
+### copy MRCONSO and MRDEF to umlsfiles
+Due to licenses it is not allowed to provide these files. Please copy them into the umlsfiles folder for running reprocessingUMLS.ipynb 
 ### jupyter nb
 start jupyter with: \
 jupyter notebook
