@@ -9,8 +9,8 @@ source env/bin/activate \
 
 ### install requirements after source cmd
 cd EntityLinkerUmls \
-pip install -r requirements.txt
-
+pip install -r requirements.txt \
+python -m ipykernel install --user --name=env
 ### unzip trained models
 1. in biobert/named-entity-recognition/output/all -> our trained BIOBERT NER \
 2. in NERdemo/output/ -> our trained NER for Medmentions \
