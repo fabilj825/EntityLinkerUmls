@@ -1,6 +1,5 @@
+Commands to be executed when in directory using terminal:
 
-
-### ⏯ Commands
 
 weasel run login \
 weasel run train-search
