@@ -8,7 +8,7 @@ python3.8 -m venv env \
 source env/bin/activate \
 
 ### install requirements after source cmd
-cd EntityLinkerUmls
+cd EntityLinkerUmls \
 pip install -r requirements.txt
 
 ### unzip trained models
