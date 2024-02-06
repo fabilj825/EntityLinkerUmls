@@ -1,10 +1,10 @@
+### clone project
+git clone  https://github.com/fabilj825/EntityLinkerUmls
 ### Install and setup virtual env python
 pip install virtualenv \
 python<version> -m venv <virtual-environment-name> \
 e.g: \
- mkdir projectA \
- cd projectA \
- python3.8 -m venv env \
+python3.8 -m venv env \
 source env/bin/activate \
 
 ### install requirements after source cmd
