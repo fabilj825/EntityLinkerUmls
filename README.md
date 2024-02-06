@@ -16,6 +16,8 @@ pip install -r requirements.txt
 2. in NERdemo/output/ -> our trained NER for Medmentions \
 3. in models -> our NEL with Scispacy Large \
 
+After unzipping you can decide if you want to train based on our scripts, or use inference_all_models.ipynb to test the unzipped models on MedMentions.
+
 ### train on our scripts
 
 NERdemo, wandBSweep should be run local with command line. See according README. They create NER models \
