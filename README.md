@@ -4,7 +4,7 @@ git clone  https://github.com/fabilj825/EntityLinkerUmls
 pip install virtualenv \
 python<version> -m venv <virtual-environment-name> \
 e.g: \
-python3.8 -m venv env \
+python3 -m venv env \
 source env/bin/activate \
 
 ### install requirements after source cmd
