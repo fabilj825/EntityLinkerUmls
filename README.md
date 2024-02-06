@@ -10,6 +10,9 @@ source env/bin/activate \
 ### install requirements after source cmd
 cd EntityLinkerUmls \
 pip install -r requirements.txt \
+pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.3/en_core_sci_lg-0.5.3.tar.gz \
+pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.3/en_ner_bc5cdr_md-0.5.3.tar.gz \
+pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.3/en_core_sci_scibert-0.5.3.tar.gz \
 python -m ipykernel install --user --name=env
 ### unzip trained models
 1. in biobert/named-entity-recognition/output/all -> our trained BIOBERT NER \
