@@ -32,7 +32,7 @@ Run inference in different combinations with inference_all_models.ipynb. We incl
 
 ### train on our scripts
 If you want to train from scratch, either use the three afterwards mentioned jupyter notebooks or train the NER models with the CLI interface of Spacy. Biobert should be run on GPU, so maybe just use the delivered checkpoint because it is time consuming. \
-NERdemo, wandBSweep should be run local with command line. See according README. They create NER models \
+NERdemo, wandBSweep can be run local with command line. See according README. They create NER models \
 Run preprocessingUMLS.ipynb -> spacy_knowledge_base.ipynb -> medmentions_and_training.ipynb in that order to create KB and a model with scispacy NER and own EL. THe EL can be used to create pipelines with the NER models trained with NERdemo, Biobert or wandBSweep
 
 
