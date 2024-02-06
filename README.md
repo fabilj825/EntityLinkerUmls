@@ -18,6 +18,10 @@ pip install -r requirements.txt
 
 After unzipping you can decide if you want to train based on our scripts, or use inference_all_models.ipynb to test the unzipped models on MedMentions.
 
+### jupyter nb
+start jupyter with: \
+jupyter notebook
+
 ### train on our scripts
 
 NERdemo, wandBSweep should be run local with command line. See according README. They create NER models \
